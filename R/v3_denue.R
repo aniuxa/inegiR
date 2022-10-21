@@ -42,7 +42,8 @@ inegi_denue <- function(latitud, longitud, token, meters = 250, keyword = "todos
   if(.EstaEnMexico(latitud, longitud)){}else{stop("Coordinates are not in Mexico")}
 
 #configurar consulta
-  url <- "http://www3.inegi.org.mx/sistemas/api/denue/v1/consulta/buscar/"
+  #url <- "http://www3.inegi.org.mx/sistemas/api/denue/v1/consulta/buscar/"
+  url <- "https://www.inegi.org.mx/app/api/denue/v1/consulta/buscar/"
   coordenadas <- paste0(latitud, ",", longitud)
   consulta <- paste0(url, keyword, "/", coordenadas, "/", meters, "/", token)
   
